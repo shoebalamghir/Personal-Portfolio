@@ -50,6 +50,7 @@
 
 
 
+
 .train-window {
   width: 100%;
   overflow-x: auto;
@@ -58,13 +59,16 @@
   scrollbar-width: thin;
   scrollbar-color: #666 transparent;
   user-select: none;
-  touch-action: pan-y;
+  -webkit-user-select: none;
+  touch-action: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 
 .train-window.dragging {
   cursor: grabbing;
 }
+
 
 .train-track {
   display: flex;
