@@ -234,3 +234,33 @@
   }
 }
 
+
+/* HERO SHOWREEL VIDEO FIX */
+
+.hero-art {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-art::before,
+.hero-art::after {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-art .art-caption {
+  z-index: 2;
+}
+
